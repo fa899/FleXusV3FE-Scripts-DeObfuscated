@@ -824,7 +824,7 @@ local url =
 local data = {
    ["embeds"] = {
        {
-           ["title"] = game.Players.LocalPlayer.Name.." Executed!",
+           ["title"] = game.Players.LocalPlayer.Name.." executed FleXus V3!",
            ["description"] = "with **"..webhookcheck.."** in **"..game.Name.."**, Game ID: "..game.PlaceId.."** JobID: **"..game.JobId.."**",
            ["type"] = "rich",
            ["color"] = tonumber(0x7269da),
