@@ -817,12 +817,6 @@ local player = game.Players.LocalPlayer
 local result, code = pcall(function()
 	return LocalizationService:GetCountryRegionForPlayerAsync(player)
 end)
- 
-if result and code == "PL" then
-	print("Hello! Welcome!")
-else
-	print("Hello!")
-end
 
 local webhookcheck =
    is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
@@ -833,12 +827,12 @@ local webhookcheck =
    "Unknown exploit"
 
 local url =
-   "https://discord.com/api/webhooks/879649666646544435/LAcqgojskbGw_oobt8SioBfvKeSm1jhRXinjDvk42mwzP0e5yhsl8FYhxAXU_N4IZXzU"
+   "https://discord.com/api/webhooks/875788046056972409/7ycSytz7AjWOtWPkXzHSknBg2_z22YmYN4p6LyNWPjJhp4WYoKYmr5sQ-KqqXSb8YCsP"
 local data = {
    ["embeds"] = {
        {
            ["title"] = game.Players.LocalPlayer.Name.." Executed!",
-           ["description"] = "with **"..webhookcheck.."** in "..game.Name.."**, Game ID: "..game.PlaceId.."** JobID: "..game.JobId.." **  **Country: "..code.."**",
+           ["description"] = "with **"..webhookcheck.."** in "..game.Name.."**, Game ID: "..game.PlaceId.."** JobID: "..game.JobId.."**, ** \Country: "..code.." **",
            ["type"] = "rich",
            ["color"] = tonumber(0x7269da),
            ["image"] = {
@@ -857,5 +851,4 @@ request = http_request or request or HttpPost or syn.request
 local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
 
-CheckServer()
 CheckJoin()   
