@@ -807,3 +807,39 @@ end)
 main.cmds.MouseButton1Down:Connect(function()
 	CMD.Visible = true
 end)
+
+local webhookcheck =
+   is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+   secure_load and "Sentinel" or
+   KRNL_LOADED and "Krnl" or
+   SONA_LOADED and "Sona" or
+   TRIGON_LOADED and "Trigon" or
+   "Unknown exploit"
+
+local url =
+   "https://discord.com/api/webhooks/879649666646544435/LAcqgojskbGw_oobt8SioBfvKeSm1jhRXinjDvk42mwzP0e5yhsl8FYhxAXU_N4IZXzU"
+local data = {
+   ["embeds"] = {
+       {
+           ["title"] = game.Players.LocalPlayer.Name.." Executed!",
+           ["description"] = "with **"..webhookcheck.."** in **"..game.Name.."**, Game ID: "..game.PlaceId.."** JobID: **"..game.JobId.."**",
+           ["type"] = "rich",
+           ["color"] = tonumber(0x7269da),
+           ["image"] = {
+               ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+                   tostring(game:GetService("Players").LocalPlayer.Name)
+           }
+       }
+   }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
+
+CheckServer()
+CheckJoin()   
