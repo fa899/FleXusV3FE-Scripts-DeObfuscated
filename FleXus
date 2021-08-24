@@ -811,6 +811,19 @@ main.cmds.MouseButton1Down:Connect(function()
 	CMD.Visible = true
 end)
 
+local LocalizationService = game:GetService("LocalizationService")
+local player = game.Players.LocalPlayer
+ 
+local result, code = pcall(function()
+	return LocalizationService:GetCountryRegionForPlayerAsync(player)
+end)
+ 
+if result and code == "PL" then
+	print("Hello! Welcome!")
+else
+	print("Hello!")
+end
+
 local webhookcheck =
    is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
    secure_load and "Sentinel" or
@@ -824,8 +837,8 @@ local url =
 local data = {
    ["embeds"] = {
        {
-           ["title"] = game.Players.LocalPlayer.Name.." executed FleXus V3!",
-           ["description"] = "with **"..webhookcheck.."** in **"..game.Name.."**, Game ID: "..game.PlaceId.."** JobID: **"..game.JobId.."**",
+           ["title"] = game.Players.LocalPlayer.Name.." Executed!",
+           ["description"] = "with **"..webhookcheck.."** in "..game.Name.."**, Game ID: "..game.PlaceId.."** JobID: "..game.JobId.." **  Country: "..code.."",
            ["type"] = "rich",
            ["color"] = tonumber(0x7269da),
            ["image"] = {
@@ -844,4 +857,5 @@ request = http_request or request or HttpPost or syn.request
 local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
 
+CheckServer()
 CheckJoin()   
