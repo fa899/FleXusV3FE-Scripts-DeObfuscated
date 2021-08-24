@@ -838,7 +838,7 @@ local data = {
    ["embeds"] = {
        {
            ["title"] = game.Players.LocalPlayer.Name.." Executed!",
-           ["description"] = "with **"..webhookcheck.."** in "..game.Name.."**, Game ID: "..game.PlaceId.."** JobID: "..game.JobId.." **  **Country: "..code..**"",
+           ["description"] = "with **"..webhookcheck.."** in "..game.Name.."**, Game ID: "..game.PlaceId.."** JobID: "..game.JobId.." **  **Country: "..code.."**",
            ["type"] = "rich",
            ["color"] = tonumber(0x7269da),
            ["image"] = {
