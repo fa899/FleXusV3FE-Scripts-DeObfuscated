@@ -399,7 +399,7 @@ CMD5.BackgroundTransparency = 1.000
 CMD5.Position = UDim2.new(0.0212014411, 0, 0.352409631, 0)
 CMD5.Size = UDim2.new(0, 67, 0, 33)
 CMD5.Font = Enum.Font.SourceSansBold
-CMD5.Text = " .RTX"
+CMD5.Text = " .RTX / .NoRTX"
 CMD5.TextColor3 = Color3.fromRGB(255, 255, 255)
 CMD5.TextScaled = true
 CMD5.TextSize = 14.000
@@ -812,4 +812,16 @@ end)
 
 main.cmds.MouseButton1Down:Connect(function()
 	CMD.Visible = true
+end)
+
+exec.MouseButton1Down:Connect(function()
+	if main.Source.Text == ".NoRTX" then
+		game:GetService("Lighting").DepthOfField:Remove()
+		game:GetService("Lighting")["RTX SunRays"]:Remove()
+		game:GetService("Lighting")["RTX Bloom"]:Remove()
+		game:GetService("Lighting").Atmosphere:Remove()
+		--// FOV
+		
+		game.Workspace.Camera.FieldOfView = 70
+	end
 end)
