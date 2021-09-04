@@ -486,12 +486,7 @@ CMD7.TextWrapped = true
 --// Scripts
 
 exec.MouseButton1Down:Connect(function()
-	if main.Source.Text == ".NetBypass" then
-		game:GetService("StarterGui"):SetCore("SendNotification", {
-		Title = "FleXus | Net Bypass Successfully Loaded!";
-		Text = "RTX Has been loaded! :)";
-		})
-		wait(0.4)
+	if main.Source.Text == ".NetBypass" then=
 		for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 			if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
 				game:GetService("RunService").Heartbeat:connect(function()
@@ -553,7 +548,6 @@ exec.MouseButton1Down:Connect(function()
 		ae.Decay = Color3.fromRGB(92, 60, 13)
 		ae.Glare = 4
 		ae.Haze = 1
-		--// FOV
 		
 		game.Workspace.Camera.FieldOfView = 90
 	end
@@ -619,11 +613,6 @@ end)
 
 exec.MouseButton1Down:Connect(function()
 	if main.Source.Text == ".HandHD" then
-		
-				game:GetService("StarterGui"):SetCore("SendNotification", {
-				Title = "FleXus | Hand: Gettings hats...!";
-				Text = Getting hats for you...";
-				})
 		local A_1 = ";hat me 63690008"
 		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
 		Event:InvokeServer(A_1)
@@ -696,10 +685,6 @@ exec.MouseButton1Down:Connect(function()
 		Event:InvokeServer(A_1)
 
 		wait(1)
-		game:GetService("StarterGui"):SetCore("SendNotification", {
-		Title = "FleXus | Got for you hats!";
-		Text = "Now you have all hats for Hand! :)";
-		})
 	end
 end)
 
@@ -749,11 +734,6 @@ end)
 
 exec.MouseButton1Down:Connect(function()
 	if main.Source.Text == ".NoRTX" then
-				game:GetService("StarterGui"):SetCore("SendNotification", {
-				Title = "FleXus | RTX: Turned off!";
-				Text = "RTX Has been turned off! :)";
-				})
-		
 		game:GetService("Lighting").DepthOfField:Remove()
 		game:GetService("Lighting")["RTX SunRays"]:Remove()
 		game:GetService("Lighting")["RTX Bloom"]:Remove()
