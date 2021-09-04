@@ -487,7 +487,10 @@ CMD7.TextWrapped = true
 
 exec.MouseButton1Down:Connect(function()
 	if main.Source.Text == ".NetBypass" then
-		print(""..game.Players.LocalPlayer.Name.." used Net Bypass module!")
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "FleXus | Net Bypass Successfully Loaded!";
+		Text = "RTX Has been loaded! :)";
+		})
 		wait(0.4)
 		for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 			if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
@@ -557,96 +560,12 @@ exec.MouseButton1Down:Connect(function()
 end)
 
 exec.MouseButton1Down:Connect(function()
-	if main.Source.Text == ".HDHatsRQ" then
-
-		local A_1 = ";hat me 4855525473"
-		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
-		Event:InvokeServer(A_1)
-
-		local A_1 = ";hat me 8337370"
-		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
-		Event:InvokeServer(A_1)
-
-		wait(3)
-
-		local A_1 = ";hat me 48474313"
-		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
-		Event:InvokeServer(A_1)
-
-		wait(3)
-
-		local A_1 = ";hat me 48474294"
-		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
-		Event:InvokeServer(A_1)
-
-		wait(3)
-
-		local A_1 = ";hat me 451220849"
-		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
-		Event:InvokeServer(A_1)
-
-		wait(3)
-
-		local A_1 = ";hat me 62724852"
-		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
-		Event:InvokeServer(A_1)
-
-		wait(3)
-
-		local A_1 = ";hat me 20372960"
-		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
-		Event:InvokeServer(A_1)
-
-		wait(5)
-
-		local A_1 = ";hat me 63690008"
-		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
-		Event:InvokeServer(A_1)
-
-		local A_1 = ";hat me 62234425"
-		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
-		Event:InvokeServer(A_1)
-
-		wait(3)
-
-		local A_1 = ";hat me 376524487"
-		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
-		Event:InvokeServer(A_1)
-
-		--// for SDoll
-
-		local A_1 = ";hat me 4904137145"
-		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
-		Event:InvokeServer(A_1)
-
-		wait(3)
-
-		local A_1 = ";hat me 4246228452"
-		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
-		Event:InvokeServer(A_1)
-		wait(3)
-		local A_1 = ";hat me 3992084515"
-		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
-		Event:InvokeServer(A_1)
-
-		wait(3)
-
-		local A_1 = ";hat me 14815761"
-		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
-		Event:InvokeServer(A_1)
-		wait(3)
-		local A_1 = ";hat me 62234425"
-		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
-		Event:InvokeServer(A_1)
-		wait(3)
-		local A_1 = ";hat me 451220849"
-		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
-		Event:InvokeServer(A_1)
-	end
-end)
-
-exec.MouseButton1Down:Connect(function()
 	if main.Source.Text == ".SDollHD" then
+	
+					game:GetService("StarterGui"):SetCore("SendNotification", {
+				Title = "FleXus | Getting Hats for SDoll...!";
+				Text = "Getting hats for you for SDoll...";
+				})
 		local A_1 = ";hat me 4904137145"
 		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
 		Event:InvokeServer(A_1)
@@ -690,11 +609,21 @@ exec.MouseButton1Down:Connect(function()
 		local A_1 = ";hat me 451220849"
 		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
 		Event:InvokeServer(A_1)
+		
+						game:GetService("StarterGui"):SetCore("SendNotification", {
+				Title = "FleXus | Done!";
+				Text = "Now you can use SDoll!! :)";
+				})
 	end
 end)
 
 exec.MouseButton1Down:Connect(function()
 	if main.Source.Text == ".HandHD" then
+		
+				game:GetService("StarterGui"):SetCore("SendNotification", {
+				Title = "FleXus | Hand: Gettings hats...!";
+				Text = Getting hats for you...";
+				})
 		local A_1 = ";hat me 63690008"
 		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
 		Event:InvokeServer(A_1)
@@ -767,6 +696,10 @@ exec.MouseButton1Down:Connect(function()
 		Event:InvokeServer(A_1)
 
 		wait(1)
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "FleXus | Got for you hats!";
+		Text = "Now you have all hats for Hand! :)";
+		})
 	end
 end)
 
@@ -816,6 +749,11 @@ end)
 
 exec.MouseButton1Down:Connect(function()
 	if main.Source.Text == ".NoRTX" then
+				game:GetService("StarterGui"):SetCore("SendNotification", {
+				Title = "FleXus | RTX: Turned off!";
+				Text = "RTX Has been turned off! :)";
+				})
+		
 		game:GetService("Lighting").DepthOfField:Remove()
 		game:GetService("Lighting")["RTX SunRays"]:Remove()
 		game:GetService("Lighting")["RTX Bloom"]:Remove()
