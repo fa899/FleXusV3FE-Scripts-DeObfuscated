@@ -550,6 +550,9 @@ exec.MouseButton1Down:Connect(function()
 		ae.Decay = Color3.fromRGB(92, 60, 13)
 		ae.Glare = 4
 		ae.Haze = 1
+		--// FOV
+		
+		game.Workspace.Camera.FieldOfView = 90
 	end
 end)
 
