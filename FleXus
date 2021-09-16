@@ -1,3 +1,8 @@
+game:GetService("StarterGui"):SetCore("SendNotification", {
+Title = "FleXus V3 [Spoiler, Soon V4]";
+Text = "Hey, soon there will be FleXus V4 Available!";
+})
+
 local Ifyouskidthisanddontgiveanycreditsthenyouraskid = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -550,8 +555,8 @@ exec.MouseButton1Down:Connect(function()
 	if main.Source.Text == ".SDollHD" then
 	
 					game:GetService("StarterGui"):SetCore("SendNotification", {
-				Title = "FleXus | Getting Hats for SDoll...!";
-				Text = "Getting hats for you for SDoll...";
+				Title = "FleXus | Getting Hats for SDoll!";
+				Text = "Getting hats for you for SDoll.";
 				})
 		local A_1 = ";hat me 4904137145"
 		local Event = game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand
