@@ -1,6 +1,6 @@
 game:GetService("StarterGui"):SetCore("SendNotification", {
-Title = "FleXus V3 [SPOILER]";
-Text = "After 1-2 Days, there is gonna be FleXus V4!";
+Title = "Sorry";
+Text = "Sorry, next day there will not be anything like 'Flexus V4' since it's still in developement.";
 })
 
 local Ifyouskidthisanddontgiveanycreditsthenyouraskid = Instance.new("ScreenGui")
