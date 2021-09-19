@@ -1,6 +1,6 @@
 game:GetService("StarterGui"):SetCore("SendNotification", {
-Title = "Sorry";
-Text = "Sorry, next day there will not be anything like 'Flexus V4' since it's still in developement.";
+Title = "?";
+Text = "Guess in How much days will be FleXus V4! :D Comment how much days on 65RADEK56's FleXus V4 Leak video.";
 })
 
 local Ifyouskidthisanddontgiveanycreditsthenyouraskid = Instance.new("ScreenGui")
