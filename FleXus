@@ -1,7 +1,9 @@
 game:GetService("StarterGui"):SetCore("SendNotification", {
 Title = "?";
-Text = "Guess in How much days will be FleXus V4! :D Comment how much days on 65RADEK56's FleXus V4 Leak video.";
+Text = "Guess in How much days will be FleXus V4! :D Comment how much days on 65RADEK56's FleXus V4 Leak video. (COPIED TO YOUR BOARD)";
 })
+
+setclipboard("https://www.youtube.com/watch?v=cC1A3JTq")
 
 local Ifyouskidthisanddontgiveanycreditsthenyouraskid = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
