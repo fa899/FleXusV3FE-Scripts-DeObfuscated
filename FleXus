@@ -5,7 +5,7 @@ https://discord.gg/PSU
 ]]
 
 game:GetService("StarterGui"):SetCore("SendNotification", {
-Title = "FleXs V4";
+Title = "FleXus V4";
 Text = "Remember, this is a Beta version of V4, There might be bugs that might occur!";
 })
 
